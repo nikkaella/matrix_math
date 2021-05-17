@@ -1,7 +1,7 @@
 # Matrix Math
 This is a portable linear algebra library. It currently only does [matrix multiplication](https://www.mathsisfun.com/algebra/matrix-multiplying.html) and [matrix transposition](https://mathinsight.org/matrix_transpose).  
 
-For this particular project, I only used standard libraries instead of using premade BLAS implementations.
+For this particular project, I only used standard libraries instead of using BLAS libraries.
 
 ## Implementation
 A matrix is a rectangular array arranged in rows and columns. In this project, it is defined as a struct:
