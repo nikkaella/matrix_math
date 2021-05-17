@@ -30,7 +30,7 @@ This function takes in 2 Matrices and multiplies them as per Matrix multiplicati
 ``Matrix transposeMatrix(Matrix mat)``  
 This function takes in a Matrix and returns a transposed Matrix.
 
-### How to Run
+## How to Run
 1. On terminal: while in directory, run `g++ -o <name> main.cpp`.  For this example, replace `<name>` with `driver`
 3. Run `.\driver.exe` or `.\<name>.exe`
 4. Follow prompts on the terminal 😁
