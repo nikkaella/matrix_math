@@ -4,6 +4,8 @@
 #include <iostream>
 using namespace std;
 
+// TODO: separate header file and implementation file
+// TODO: error handling: assertion testing
 namespace matrix_math
 {
     /* 
@@ -15,6 +17,7 @@ namespace matrix_math
      */
     struct Matrix
     {
+        // TODO: make these variables private (access modifier)
         int **matrix2D;
         int rows;
         int cols;
@@ -31,7 +34,10 @@ namespace matrix_math
      */
     Matrix initializeMatrix(int rows, int cols)
     {
-        struct Matrix math;
+        //TODO: check for errors that return -1 before the rest of the function
+        // This requires sending in a pointer to check for NULL
+
+        Matrix math;
 
         math.matrix2D = new int *[rows];
         for (int i = 0; i < rows; i++)
@@ -54,6 +60,9 @@ namespace matrix_math
      */
     Matrix inputMatrixElementsFromUser(Matrix mat)
     {
+        //TODO: check for errors that return -1 before the rest of the function
+        // This requires sending in a pointer to check for NULL
+
         cout << "Enter elements to add: ";
         for (int i = 0; i < mat.rows; i++)
         {
@@ -79,6 +88,7 @@ namespace matrix_math
     {
         if (mat.rows > 0 && mat.cols > 0)
         {
+            // O(n^2)
             for (int i = 0; i < mat.rows; i++)
             {
                 for (int j = 0; j < mat.cols; j++)
@@ -107,10 +117,15 @@ namespace matrix_math
      */
     Matrix multiplyMatrix(Matrix mat1, Matrix mat2)
     {
+        //TODO: check for errors that return -1 before the rest of the function
+        // This requires sending in a pointer to check for NULL
+
         // initialize resulting matrix
-        struct Matrix results = initializeMatrix(mat1.rows, mat2.cols);
+        // TODO: remove "struct". It is not needed.
+        Matrix results = initializeMatrix(mat1.rows, mat2.cols);
         int sum = 0;
 
+        // O(n^3)
         for (int i = 0; i < mat1.rows; i++)
         {
             for (int k = 0; k < mat2.cols; k++)
@@ -138,8 +153,12 @@ namespace matrix_math
      */
     Matrix transposeMatrix(Matrix mat)
     {
+        //TODO: check for errors that return -1 before the rest of the function
+        // This requires sending in a pointer to check for NULL
+
         // initialize transposed matrix
-        struct Matrix transposed = initializeMatrix(mat.cols, mat.rows);
+        // TODO: remove "struct". It is not needed.
+        Matrix transposed = initializeMatrix(mat.cols, mat.rows);
 
         for (int i = 0; i < mat.rows; i++)
         {
@@ -151,6 +170,9 @@ namespace matrix_math
 
         return transposed;
     }
+
+    // TODO: create getters and setters
+
 }
 
 #endif

@@ -4,11 +4,14 @@ using namespace matrix_math;
 using namespace std;
 
 // DRIVER CODE
-
+// TODO: create a makefile
 int main()
 {
     int rows, cols, cols2;
 
+
+    // TODO: instead of prompting the user for which elements to add,
+    // set it up so inputMatrixElements can take in an array of elements, 1 for rows, 1 for cols
     cout << "Enter # of rows for matrix1: ";
     cin >> rows;
     cout << "Enter # of cols for matrix1: ";
@@ -17,7 +20,10 @@ int main()
     cout << "Enter # of cols for matrix2: ";
     cin >> cols2;
 
-    struct Matrix m1, m2; 
+    // TODO: remove "struct". It is not needed.
+    Matrix m1, m2; 
+
+    // TODO: create assertion testing
 
     // initialize matrix 1
     m1 = initializeMatrix(rows, cols);
@@ -32,9 +38,10 @@ int main()
     cout << "2nd Matrix: " << endl;
     printMatrix(m2);
 
-    struct Matrix transposed1 = transposeMatrix(m1);
-    struct Matrix transposed2 = transposeMatrix(m2);
-    struct Matrix multiplied = multiplyMatrix(m1, m2);
+    // TODO: remove "struct". It is not needed.
+    Matrix transposed1 = transposeMatrix(m1);
+    Matrix transposed2 = transposeMatrix(m2);
+    Matrix multiplied = multiplyMatrix(m1, m2);
 
     cout << "Transposed matrix 1: " << endl;
     printMatrix(transposed1);
